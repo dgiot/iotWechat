@@ -1,0 +1,88 @@
+<wux-date-picker visible="{{ visible }}" controlled mode="datetime" 
+value="{{ value1 }}" lang="{{ lang }}" data-index="1" 
+data-mode="datetime" bind:confirm="onConfirm" bind:visibleChange="onVisibleChange" />
+
+<wux-date-picker visible="{{ visible2 }}" controlled mode="datetime" 
+value="{{ value2 }}" lang="{{ lang }}" data-index="2" 
+data-mode="datetime" bind:confirm="onConfirm2" bind:visibleChange="onVisibleChange2" />
+
+<view class="horView3">
+  <text class='iTextTitle'>{{deviceName}}</text>
+  <text class='cTextType1' wx:if="{{ deviceType =='在线'}}">在线</text>
+  <text class='cTextType2' wx:if="{{ deviceType =='离线'}}">离线</text>
+  <text class='cTextType3' wx:if="{{ deviceType ==''}}"></text>
+</view>
+
+<view class="horView2">
+  <view class="verView2">
+    <text class='iTextName'>设备编号：{{deviceCode}}</text>
+    <text class='iTextName'>所属单位：{{deviceCompany}}</text>
+  </view>
+
+  <button class="ztView" bindtap="goZt" style="width:80px">组态</button>
+
+</view>
+
+<view class="linerView"></view>
+
+<wux-tabs wux-class="bordered" controlled current="{{ key }}" bindchange="onTabsChange" theme="positive">
+  <block wx:for="{{ tabs }}" wx:key="key">
+    <wux-tab key="{{ item.key }}" title="{{ item.title }}"></wux-tab>
+  </block>
+</wux-tabs>
+<swiper current="{{ index }}" style="height:{{vHeight}}px" bindchange="onSwiperChange">
+  <swiper-item>
+    <scroll-view  scroll-y="true" class="content" style="height:{{vHeight}}px" >
+      <view class='gridview-item' wx:for="{{listdata}}" wx:key="key">
+        <view class="itemHorView">
+          <text class="itemNameText">{{item.name}}</text>
+          <image class="itemImg" src="{{item.imgurl}}"></image>
+        </view>
+        <text class="itemConText">{{item.number}}{{item.unit}}</text>
+        <text class="itemTimeText">{{item.time}}</text>
+      </view>
+    </scroll-view>
+
+  </swiper-item>
+  <!-- <swiper-item>
+    <view class="content2" style="height:{{vHeight}}px">
+      <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    </view>
+  </swiper-item> -->
+  <swiper-item>
+    <view style="height:{{vHeight}}px">
+      <view class="rowView">
+        <wux-row>
+          <wux-col span="5.5">
+            <wux-date-picker mode="datetime" value="{{ value1 }}" lang="{{ lang }}" data-index="1" data-mode="datetime"
+             bindtap="onConfirm">
+              <view class="wuxRowView">{{displayValue1}}</view>
+            </wux-date-picker>
+          </wux-col>
+
+          <wux-col span="1">
+            <view class="wuxRowView">至</view>
+          </wux-col>
+
+          <wux-col span="5.5">
+            <wux-date-picker mode="datetime" value="{{ value2 }}" lang="{{ lang }}" data-index="2" data-mode="datetime"
+            bindtap="onConfirm2">
+              <view class="wuxRowView">{{displayValue2}}</view>
+            </wux-date-picker>
+          </wux-col>
+
+        </wux-row>
+
+
+
+      </view>
+
+      <picker bindchange="bindPickerChange" value="{{textIndex}}" range="{{choiceTextList}}">
+    <view class="rowView2">
+      当前选择：{{choiceTextList[textIndex]}}
+    </view>
+  </picker>
+        <ec-canvas id="mychart" canvas-id="{{mychartId}}" ec="{{ ec2 }}"></ec-canvas>
+    </view>
+  </swiper-item>
+</swiper>

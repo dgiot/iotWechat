@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/deviceList/deviceList",
+    "pages/index/index",
+    "pages/deviceInfo/deviceInfo",
+    "pages/logs/logs",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#196ead",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/icon_1_bom.png",
+        "selectedIconPath": "images/icon_1_top.png"
+      },
+      {
+        "pagePath": "pages/deviceList/deviceList",
+        "text": "设备",
+        "iconPath": "images/icon_3_bom.png",
+        "selectedIconPath": "images/icon_3_top.png"
+      }
+     
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

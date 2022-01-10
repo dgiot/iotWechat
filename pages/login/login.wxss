@@ -1,0 +1,91 @@
+/* pages/login/login.wxss */
+
+.allView{
+  width: 100%;
+  height:100vh;
+  padding-top: 170px;
+  box-sizing: border-box;
+  background-color: #166ead;
+}
+
+.inputView {
+  border-bottom: solid #ffffff 1px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 50px;
+
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ffffff;
+  
+}
+
+
+.btnView{
+  height: 45px;
+  background: #ffffff;
+  border-radius: 4px;
+  line-height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #126480;
+  font-size: 15px;
+  z-index: 30;  
+}
+
+
+button::after {
+  border: none;
+}
+
+.anit {
+  width: 100%;
+  height: 70rpx;
+  background: red;
+  position: absolute;
+  color: white;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  top: -70rpx;
+  z-index: 11;
+  text-align: center;
+}
+
+.show {
+  top: -70rpx;
+  animation: show 2s;
+  animation-timing-function: ease;
+}
+
+@keyframes show {
+  0% {
+    top: -70rpx;
+  }
+
+  10% {
+    top: 0rpx;
+  }
+
+  80% {
+    top: 0rpx;
+  }
+
+  100% {
+    top: -70rpx;
+  }
+}
+.imgBg{
+  position: absolute;
+  top: 0px;
+z-index: -1;
+}
+.imgIcon{
+  position: absolute;
+  top: 50px;
+  margin-left: 20%;
+  width: 60%;
+  height: 100px;
+  z-index: -1;
+}

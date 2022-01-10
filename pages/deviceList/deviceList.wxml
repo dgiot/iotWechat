@@ -1,0 +1,58 @@
+<!-- <button class='btnAddView' bindtap="onAddDevice" style="width:80%">
+  <image class='btnImg' src='../../images/homeImg1.png'></image>
+  <view>添加设备</view>
+</button> -->
+
+<view class="horBoxView">
+
+  <view class="pickerView" bindtap="onOpen1">
+    <view class="horTopView">
+      <text class="textBlue" wx:if="{{title1 == '所有部门'}}"> 所属部门</text>
+      <text class="textBlue" wx:if="{{title1 != '所有部门'}}"> {{title1}}</text>
+      <image class="imgRightClass" src="../../images/img_right_go.png"></image>
+    </view>
+  </view>
+
+  <wux-cascader wux-class="cascaderView" visible="{{ visible1 }}" default-value="{{ value1 }}" title="所属部门"
+    options="{{ options1 }}" bind:close="onClose1" bind:change="onChange1" />
+
+  <picker class="pickerView" bindchange="bindPickerChange2" value="{{index}}" range="{{productList2}}">
+    <view class="horTopView">
+      <text class="textBlue" wx:if="{{index == 0}}"> 产品类型</text>
+      <text class="textBlue" wx:if="{{index != 0}}"> {{productList2[index]}}</text>
+      <image class="imgRightClass" src="../../images/img_right_go.png"></image>
+    </view>
+  </picker>
+
+  <picker class="pickerView" bindchange="bindPickerChange3" value="{{index2}}" range="{{typeList}}">
+    <view class="horTopView">
+      <text class="textBlue"> {{typeList[index2]}}</text>
+      <image class="imgRightClass" src="../../images/img_right_go.png"></image>
+    </view>
+  </picker>
+</view>
+
+<scroll-view class="scrollView" bindscrolltolower='onDownListener' scroll-x="false" scroll-y="true"
+  style="height:{{viewH}}px">
+  <view wx:for="{{deviceList}}" data-index='{{index}}' wx:for-item="item" bindtap='itemClick'>
+    <view class='itemView'>
+      <view class="horView3">
+        <text class='iTextTitle'>{{item.name}}</text>
+        <text class='cTextType1' wx:if="{{item.status=='ONLINE'}}">在线</text>
+        <text class='cTextType2' wx:if="{{item.status=='OFFLINE'}}">离线</text>
+      </view>
+
+      <view class="horView2">
+        <view class="verView2">
+          <text class='iTextName'>设备编号：{{item.devaddr}}</text>
+          <text class='iTextName'>所属单位：{{item.role}}</text>
+        </view>
+        <image bindtap="goInfo" data-index='{{index}}' src="../../images/img_device_1.png" class="imgSee1"></image>
+        <image bindtap="goSetting" data-index='{{index}}' src="../../images/img_device_2.png" class="imgSee2"></image>
+      </view>
+
+
+    </view>
+    <!-- <view class="linerView"></view> -->
+  </view>
+</scroll-view>

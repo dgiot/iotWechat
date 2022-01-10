@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "数据详情",
+  "usingComponents": {
+    "wux-tabs": "../../dist/tabs/index",
+    "wux-tab": "../../dist/tab/index",
+    "wux-badge": "../../dist/badge/index",
+  "ec-canvas": "../../ec-canvas/ec-canvas",
+  "wux-segmented-control": "../../dist/segmented-control/index",
+  "wux-date-picker": "../../dist/date-picker/index",
+  "wux-row": "../../dist/row/index",
+  "wux-col": "../../dist/col/index",
+  "wux-cell-group": "../../dist/cell-group/index",
+  "wux-cell": "../../dist/cell/index"
+
+},
+"enablePullDownRefresh": true
+
+}

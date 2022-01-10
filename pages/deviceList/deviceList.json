@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "设备管理",
+  "usingComponents": {
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-cascader": "../../dist/cascader/index"
+}
+
+ 
+}

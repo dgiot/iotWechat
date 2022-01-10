@@ -1,0 +1,31 @@
+<view class="box">
+  <view class="horView">
+    <text class="textTitle">dgiot开源平台</text>
+    <view class="horView2">
+      <image class="homeImg1" bindtap="goTab3" src='../../images/homeImg1.png'></image>
+      <view class="homeViewRed" wx:if="{{unPanalarmCount > 0}}"></view>
+      <image class="homeImg2" bindtap="onAddDevice" src='../../images/homeImg2.png'></image>
+    </view>
+  </view>
+  <view class="horBoxView" bindtap="onDeviceList">
+    <canvas canvas-id="ringCanvas" class="homeCanvas" bindtouchstart="touchHandler"></canvas>
+    <view class="verView">
+      <text class="textGreen">{{onlineCount}}</text>
+      <text class="textTitle2">在线设备</text>
+    </view>
+    <view class="verView">
+      <text class="textRed">{{offlineCount}}</text>
+      <text class="textTitle2">离线设备</text>
+    </view>
+    <view class="verView">
+      <text class="textGrey">{{notificationCount}}</text>
+      <text class="textTitle2">报警设备</text>
+    </view>
+  </view>
+  <view class="horView">
+    <button hover-class="button-hover" class='btn2' bindtap="goTab3" style="width:100vw">
+      <view class="textTitle3">{{unPanalarmCount}}</view>
+      <text class="textTitle4">未处理报警数</text>
+    </button>
+  </view>
+</view>
