@@ -1,0 +1,37 @@
+<!--pages/addDevice/addDevice.wxml-->
+<view class="horBlueView">
+<text class="textBlue">请输入产品序列号(IMEI)</text>
+</view>
+
+<view class="horView">
+  <input type="text" bindinput="codeInput" value="{{codeValue}}" style="width:{{viewWidth}}px" class="inputSearchView" placeholder="请输入产品标签贴上的序列号"/>
+  <image class="qrImgView" bindtap="onQrScan" src="../../images/grey_qr_img.png"></image>
+</view>
+
+<view class="horBlueView2"></view>
+<view class="horView2">
+      <view class="verView2">
+        <text class='iTextName1'>设备位置</text>
+        <text class='iTextName2'>{{mAddress}}</text>
+      </view>
+      <button class='btn1' style="width:110px" data-index='{{index}}' bindtap="onOpenMap">
+    <view>地图选点</view>
+</button>
+    </view>
+
+<view class="horBlueView">
+<text class="textBlue">请选择产品类型</text>
+</view>
+
+<scroll-view style="height:300px" scroll-y="true" class="scrView">
+    <view class="{{index==idx?'_left':'left'}}"  wx:for="{{deviceTypeList}}" wx:for-item="item" bindtap='goIndex'  data-index="{{index}}" >
+      {{item.name}}
+      </view>
+      </scroll-view>
+
+      <view class="textInfoView">*添加设备前请确保您的设备已经接上电源且连上网络</view>
+      <button class='btnView' bindtap="goAddDevice"  style="width:{{viewWidth + 67}}px">
+    <text  class="textTitle4">添加设备</text>
+ </button>
+
+ <view class='anit {{show? "show": ""}}'>{{showMsg}}</view>

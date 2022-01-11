@@ -32,7 +32,7 @@ Page({
     wx.getSystemInfo({
      success: function(res) {
          that.setData({
-          viewH:res.windowHeight - (res.statusBarHeight +35),
+          viewH:res.windowHeight - (res.statusBarHeight +85),
           sessionToken:app.globalData.token,
          });
      }
@@ -94,7 +94,7 @@ Page({
      */
     onAddDevice: function () {
       wx.navigateTo({
-          url: '../device/pages/addDevice/addDevice'
+          url: '../../pages/addDevice/addDevice'
       })
   },
 

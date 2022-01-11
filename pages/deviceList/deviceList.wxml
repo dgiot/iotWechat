@@ -1,7 +1,7 @@
-<!-- <button class='btnAddView' bindtap="onAddDevice" style="width:80%">
+<button class='btnAddView' bindtap="onAddDevice" style="width:80%">
   <image class='btnImg' src='../../images/homeImg1.png'></image>
   <view>添加设备</view>
-</button> -->
+</button>
 
 <view class="horBoxView">
 

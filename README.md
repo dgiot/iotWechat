@@ -19,23 +19,23 @@
 
 ### 接口说明
 #### 登录
-  openid登录 -- (http://1.117.219.8:5080/swagger/#/_User/pput_classes_user_id)
+  openid登录 -- (http://prod.dgiotcloud.com/swagger/#/_User/pput_classes_user_id)
   
-  微信绑定账号登录 --（http://1.117.219.8:5080/swagger/#/Wechat/post_wechat）
+  微信绑定账号登录 --（http://prod.dgiotcloud.com/swagger/#/Wechat/post_wechat）
   
-  微信登录 --（http://1.117.219.8:5080/swagger/#/Wechat/get_wechat）
+  微信登录 --（http://prod.dgiotcloud.com/swagger/#/Wechat/get_wechat）
   
 #### 设备 <br/>
-   设备查询 --（http://1.117.219.8:5080/swagger/#/Device/get_classes_device）
+   设备查询 --（http://prod.dgiotcloud.com/swagger/#/Device/get_classes_device）
    
 --- 部门 <br/>
-   部门查询 --（http://1.117.219.8:5080/swagger/#/_Role/get_roletree）
+   部门查询 --（http://prod.dgiotcloud.com/swagger/#/_Role/get_roletree）
    
 #### 产品 <br/>
-  产品查询 --（http://1.117.219.8:5080/swagger/#/Product/get_classes_product）
+  产品查询 --（http://prod.dgiotcloud.com/swagger/#/Product/get_classes_product）
   
 #### 获取部门token <br/>
-  拉取获取对应部门token--（http://1.117.219.8:5080/swagger/#/_User/get_token）
+  拉取获取对应部门token--（http://prod.dgiotcloud.com/swagger/#/_User/get_token）
    
 
 ### 联系方式

@@ -5,6 +5,7 @@
     "pages/alarm/alarm",
     "pages/index/index",
     "pages/deviceInfo/deviceInfo",
+    "pages/addDevice/addDevice",
     "pages/logs/logs",
     "pages/login/login"
   ],
