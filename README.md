@@ -14,7 +14,7 @@
 
  | 首页      | 设备        |   告警 |
   | ----------- | ----------- |-------------|
-  | ![](http://doc.iotn2n.com/server/index.php?s=/api/attachment/visitFile/sign/137e41bfff56cfc03cd7d353d0ac13c2)|![](http://doc.iotn2n.com/server/index.php?s=/api/attachment/visitFile/sign/def72c5e3bbfb2f5d1eb76f79130ed66) | ![](http://doc.iotn2n.com/server/index.php?s=/api/attachment/visitFile/sign/eabf820ed6d87e8f4c6e92ff3972f0ac) |
+  | ![](http://prod.dgiotcloud.com/group1/default/20220111/15/49/7/home)|![](http://prod.dgiotcloud.com/group1/default/20220111/15/50/7/device) | ![](http://prod.dgiotcloud.com/group1/default/20220111/15/50/7/clarm) |
 
 
 ### 接口说明
@@ -36,10 +36,12 @@
   
 #### 获取部门token <br/>
   拉取获取对应部门token--（http://prod.dgiotcloud.com/swagger/#/_User/get_token）
-   
+
+### 导入外部组件库
+Wux Weapp  ----https://wux-weapp.github.io/wux-weapp-docs/#/introduce
 
 ### 联系方式
 
 |联系方式 | 地址 |
 |--------|---------|
-|微信    | ![](https://www.showdoc.com.cn/server/api/attachment/visitFile?sign=41a873946b1beb232e9a77a15cca01b8)      |
+|微信    | ![](https://prod.dgiotcloud.com/group1/default/20220111/15/43/7/wx)      |
