@@ -1,0 +1,88 @@
+<wux-popup position="bottom" visible="{{ visible3 }}" bind:close="onClose2">
+
+<view class="verView21">
+  <text class="popTitile">报警详情</text>
+  <view class="verView2" wx:for-item="mItem1" wx:key="mItem1" wx:for="{{mItem.con}}">
+    <text class='iTextName'>{{mItem1}}</text>
+  </view>
+  <text class='iTextName'>处理结果:{{mProcess}}</text>
+  <view style="height:50px"></view>
+</view>
+
+</wux-popup>
+
+<wux-popup position="bottom" visible="{{ visible2 }}" bind:close="onClose1">
+
+<view class="verView21">
+<text class="popTitile">处理报警</text>
+<view class="horView20">
+<text class="textView" style="margin-left:15px;margin-right:10px" >处理报警:</text>
+<view class="page-section">
+  <radio-group bindchange="radioChange" class="rg">
+  <radio checked="true"  value='已处理' >已处理</radio>
+  <radio  value='误报' style="margin-left:15px;margin-right:15px">误报</radio>
+  <radio  value='忽略'>忽略</radio>
+</radio-group>
+</view>
+</view>
+<view class="horTopClass2">
+<text class="textView"> 处理结果:</text>
+<textarea class="areaView"   bindinput='inputTilte2'  placeholder="请输入处理记录内容" />
+</view>
+<button class='btnView1'  bindtap="onPut"  style="width:80%">
+  <text  class="textTitle3">确认</text>
+</button>
+<view style="height:10px"></view>
+</view>
+
+</wux-popup>
+
+<view class="horBoxView">
+
+<picker class="pickerView" bindchange="bindPickerChange" value="{{index1}}" range="{{productList2}}">
+  <view class="horTopView">
+    <text class="textBlue3" wx:if="{{index1 != 0 }}"> {{productList2[index1]}}</text>
+    <text class="textBlue3" wx:if="{{index1 == 0}}"> 设备类型</text>
+    <image class="imgRightClass2" src="../../images/img_right_go.png"></image>
+  </view>
+</picker>
+
+<picker class="pickerView" bindchange="bindPickerChange2" value="{{index2}}" range="{{typeList}}">
+  <view class="horTopView">
+    <text class="textBlue3" wx:if="{{index2 != 0 }}"> {{typeList[index2]}}</text>
+    <text class="textBlue3" wx:if="{{index2 == 0}}"> 全部告警</text>
+    <image class="imgRightClass2" src="../../images/img_right_go.png"></image>
+  </view>
+</picker>
+</view>
+
+<scroll-view class="scrollView" bindscrolltolower='onDownListener' scroll-y="true"
+style="height:{{viewH}}px,width:100%">
+<view wx:for="{{workList}}" data-index='{{index}}' wx:for-item="item" bindtap='itemClick'>
+  <view class='itemView'>
+    <view class="horTopClass">
+      <text class='iTextTitle'>{{item.devicename}}</text>
+      <text class='cTextType3' wx:if="{{item.Public == true}}">已处理</text>
+      <text class='cTextType4' wx:if="{{item.Public == false}}">未处理</text>
+    </view>
+
+    <view class="verView2" wx:for-item="mItem" wx:key="mItem" wx:for="{{item.con}}">
+      <text class='iTextName'>{{mItem}}</text>
+    </view>
+    <view class="horView2">
+      <view style="width:70%"></view>
+      <button class='btn1' wx:if="{{item.Public == true}}" style="width:80px" bindtap="goInfo" data-index='{{index}}'>
+        <view>查看</view>
+      </button>
+      <button class='btn2' style="width:80px" data-index='{{index}}' bindtap="showPop"
+        wx:if="{{item.Public == false}}">
+        <view>处理</view>
+      </button>
+
+    </view>
+
+    <!-- <view class="linerView"></view> -->
+  </view>
+</view>
+
+</scroll-view>

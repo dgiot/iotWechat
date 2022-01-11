@@ -2,6 +2,7 @@
   "pages": [
     "pages/home/home",
     "pages/deviceList/deviceList",
+    "pages/alarm/alarm",
     "pages/index/index",
     "pages/deviceInfo/deviceInfo",
     "pages/logs/logs",
@@ -27,6 +28,12 @@
         "text": "设备",
         "iconPath": "images/icon_3_bom.png",
         "selectedIconPath": "images/icon_3_top.png"
+      },
+      {
+        "pagePath": "pages/alarm/alarm",
+        "text": "告警",
+        "iconPath": "images/icon_4_bom.png",
+        "selectedIconPath": "images/icon_4_top.png"
       }
      
     ]

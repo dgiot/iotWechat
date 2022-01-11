@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "告警",
+  "usingComponents": {"wux-row": "../../dist/row/index",
+    "wux-col": "../../dist/col/index",
+    "wux-popup": "../../dist/popup/index"}
+}
