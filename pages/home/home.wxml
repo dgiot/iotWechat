@@ -23,6 +23,29 @@
     </view>
   </view>
   <view class="horView">
+    <button class='btn1' hover-class="hoverGrey" bindtap="onAddDevice">
+      <image class='btnImg' src='../../images/home_icon_1.png'></image>
+      <view>添加设备</view>
+    </button>
+    <view class="width10View"></view>
+    <button class='btn1' hover-class="hoverGrey" bindtap="onMap">
+      <image class='btnImg' src='../../images/home_icon_2.png'></image>
+      <view>设备地图</view>
+    </button>
+  </view>
+
+  <view class="horView">
+    <button class='btn1' hover-class="hoverGrey" bindtap="onUser">
+      <image class='btnImg' src='../../images/home_icon_3.png'></image>
+      <view>用户管理</view>
+    </button>
+    <view class="width10View"></view>
+    <button class='btn1' hover-class="hoverGrey" bindtap="onWork">
+      <image class='btnImg' src='../../images/home_icon_4.png'></image>
+      <view>维保工单</view>
+    </button>
+  </view>
+  <view class="horView">
     <button hover-class="button-hover" class='btn2' bindtap="goTab3" style="width:100vw">
       <view class="textTitle3">{{unPanalarmCount}}</view>
       <text class="textTitle4">未处理报警数</text>
