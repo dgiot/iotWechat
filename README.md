@@ -42,4 +42,4 @@
 
 |联系方式 | 地址 |
 |--------|---------|
-|微信    |  ![](http://doc.iotn2n.com/server/index.php?s=/api/attachment/visitFile/sign/401c8e85a53271043130afb12b7f49da)      |
+|微信    | ![](https://www.showdoc.com.cn/server/api/attachment/visitFile?sign=41a873946b1beb232e9a77a15cca01b8)      |
