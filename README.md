@@ -1,4 +1,4 @@
-## dgiot_wechet
+## dgiot_wechat
 
 ### 介绍
 基于dgiot的微信小程序设备接入演示demo
