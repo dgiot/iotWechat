@@ -19,23 +19,23 @@
 
 ### 接口说明
 #### 登录
-  openid登录 -- (http://prod.dgiotcloud.com/swagger/#/_User/pput_classes_user_id)
+  openid登录 -- (http://prod.iotn2n.com/swagger/#/_User/pput_classes_user_id)
   
-  微信绑定账号登录 --（http://prod.dgiotcloud.com/swagger/#/Wechat/post_wechat）
+  微信绑定账号登录 --（http://prod.iotn2n.com/swagger/#/Wechat/post_wechat）
   
-  微信登录 --（http://prod.dgiotcloud.com/swagger/#/Wechat/get_wechat）
+  微信登录 --（http://prod.iotn2n.com/swagger/#/Wechat/get_wechat）
   
 #### 设备 <br/>
-   设备查询 --（http://prod.dgiotcloud.com/swagger/#/Device/get_classes_device）
+   设备查询 --（http://prod.iotn2n.com/swagger/#/Device/get_classes_device）
    
 --- 部门 <br/>
-   部门查询 --（http://prod.dgiotcloud.com/swagger/#/_Role/get_roletree）
+   部门查询 --（http://prod.iotn2n.com/swagger/#/_Role/get_roletree）
    
 #### 产品 <br/>
-  产品查询 --（http://prod.dgiotcloud.com/swagger/#/Product/get_classes_product）
+  产品查询 --（http://prod.iotn2n.com/swagger/#/Product/get_classes_product）
   
 #### 获取部门token <br/>
-  拉取获取对应部门token--（http://prod.dgiotcloud.com/swagger/#/_User/get_token）
+  拉取获取对应部门token--（http://prod.iotn2n.com/swagger/#/_User/get_token）
 
 ### 导入外部组件库
 Wux Weapp  ----https://wux-weapp.github.io/wux-weapp-docs/#/introduce

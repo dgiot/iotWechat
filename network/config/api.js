@@ -1,4 +1,4 @@
-var WxApiRoot =   'https://pump.dgiotcloud.com/' // 'http://101.35.187.227:5080' //http://test.hgjzt.com //'https://prod.dgiotcloud.com'; //cover.zjzhxx.com/
+var WxApiRoot =   'https://pump.iotn2n.com/' 
 module.exports = {
 
   //用户相关

@@ -21,10 +21,8 @@ App({
     departmentList:[],
     title1:'所有部门',
     toUser:false,
-    // httpUrl:'http://1.117.219.33/',
-   // httpUrl:'https://flow.hzmctech.com/',
-   httpUrl: 'https://prod.dgiotcloud.com/',   //'https://prod.dgiotcloud.com/', //   
-   serverUrl:'https://prod.dgiotcloud.com',  
+   httpUrl: 'https://prod.iotn2n.com/',     
+   serverUrl:'https://prod.iotn2n.com',  
     tag:'',
   }
 })

@@ -7,7 +7,7 @@ Page({
    */
   data: {
     mCode:'',   //账号 dgiot_admin
-    mPwd:'',    //密码 yelumeng
+    mPwd:'',    //密码 dgiot_admin
     openid:''
   },
 
