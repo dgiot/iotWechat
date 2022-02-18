@@ -1,0 +1,55 @@
+<view class="horBoxView">
+<button class='btnAddView' bindtap="onAddUser" style="width:80%" >
+    <image class='btnImg' src='../../images/homeImg1.png'></image>
+    <view>添加用户</view>
+ </button>
+ <view style="width:10px"></view>
+ <button class='btnUnView' bindtap="onUnBind" style="width:80%" >
+    <view>解绑当前用户</view>
+ </button>
+</view>
+ <view  bindtap="onOpen1" class="horTopView">
+      <text class="textBlue"> 选择账号所属部门　　　{{title1}}</text>
+      <image  class="imgRightClass" src="../../images/img_right_go.png"></image>
+    </view>
+
+
+    <wux-cascader wux-class="cascaderView"  visible="{{ visible1 }}" default-value="{{ value1 }}" title="所属部门" 
+  options="{{ options1 }}" bind:close="onClose1" bind:change="onChange1"  />
+
+<view class="linerView"></view>
+
+<scroll-view scroll-x="false" scroll-y="true" style="height:{{viewH}}px">
+  <view wx:for="{{userList}}" data-index='{{index}}' wx:for-item="item" bindtap='itemClick'>
+    <view class='itemView'>
+      <view class="horView1">
+        <text class='cTextType1'>经销商</text>
+        <text class='iTextTitle'>{{item.username}}</text>
+      </view>
+
+    <view class="horView2">
+      <view class="verView2">
+        <text class='iTextName'>姓名：{{item.nick}}</text>
+        <text class='iTextName'>手机：{{item.phone}}</text>
+      </view>
+    <text class='iText2'>启用账号 </text>
+    <switch checked="{{item.emailVerified}}" data-index='{{index}}' color="#1890ff"  bindchange="switch1Change"/>
+    </view>
+
+    <view class="horView3">
+    <button class='btn1' bindtap="goDevice" >
+    <image class='btnImg' src='../../images/homeImg1.png'></image>
+    <view>设备管理</view>
+ </button>
+ <view class="width10View"></view>
+ <button class='btn1' data-index='{{index}}' bindtap="onUpdateUser">
+    <image class='btnImg' src='../../images/homeImg2.png'></image>
+    <view>编辑用户</view>
+</button>
+  </view>
+</view>
+<view class="linerView"></view>
+  </view>
+</scroll-view>
+
+<view class='anit {{show? "show": ""}}'>{{showMsg}}</view>

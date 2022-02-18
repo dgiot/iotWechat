@@ -1,0 +1,119 @@
+
+<wux-popup  position="bottom" visible="{{ visible2 }}" bind:close="onClose1">
+<view class="verView20">
+<text class="popTitile">派发工单</text>
+
+<view  bindtap="onOpen1"   wx:if="{{item.status == 0}}" class="horTopView2">
+      <text class="textBlue"> 选择维保人员所属部门　　　{{title1}}</text>
+    </view>
+    <wux-cascader wux-class="cascaderView"  visible="{{ visible1 }}" default-value="{{ value1 }}" title="所属部门" 
+  options="{{ options1 }}" bind:close="onClose3" bind:change="onChange2"  />
+
+  <picker class="horTopClass2"    bindchange="bindPickerChange5" value="{{index5}}" range="{{cUserList}}">
+    <view class="horTopView10">
+      <text class="textBlue2"> 维保人员:</text>
+      <text class="textBlue2" > {{cUserList[index5]}}</text>
+      <image class="imgRightClass3"  src="../../images/img_right_go.png"></image>
+    </view>
+  </picker>
+
+<view class="horTopClass2">
+  <text class="textBlue2"> 备注:</text>
+  <textarea class="areaView"   bindinput='inputTilte2'  placeholder="请输入处理记录内容" />
+</view>
+
+<button class='btnView1'  bindtap="onMaintenance"  style="width:80%">
+    <text  class="textTitle3">派单</text>
+ </button>
+</view>
+</wux-popup>
+
+
+<wux-popup  position="bottom" visible="{{ visible3 }}" bind:close="onClose2">
+
+<view class="verView21">
+<text class="popTitile">结单</text>
+          <text class='iTextName4'>设备名称:{{item.info.devicename}}</text>
+          <text class='iTextName4'>建单时间:{{item.createdAt}}</text>
+          <text class='iTextName4'>工单描述:{{item.info.description}}</text>
+          <text class='iTextName4'>维保人员:{{item.info.receiveusername}}</text>
+          <text class='iTextName4'>处理结果:{{item.info.step2.Remarks}}</text>
+
+        <view class="horTopClass2">
+  <text class="textBlue2"> 评价:</text>
+  <textarea class="areaView"   bindinput='inputTilte3'  placeholder="请对此次工单处理做结单评价!" />
+</view>
+
+  <button class='btnView1'  bindtap="onEndOrder"  style="width:80%">
+    <text  class="textTitle3">结单</text>
+ </button>
+
+</view>
+</wux-popup>
+
+
+<view class="horTopClass" bindtap="goMyWork">
+  <text class="textBlue"> 客户派给我的工单</text>
+  <view class="homeViewRed" wx:if="{{mCount > 0}}">{{mCount}}</view>
+  <image class="imgRightClass" src="../../images/img_right_go.png"></image>
+</view>
+
+<view class="horBoxView">
+
+  <picker class="pickerView" bindchange="bindPickerChange" value="{{index1}}" range="{{workTypeList}}">
+    <view class="horTopView">
+      <text class="textBlue3" wx:if="{{index1 != 0 }}"> {{workTypeList[index1]}}</text>
+      <text class="textBlue3" wx:if="{{index1 == 0}}"> 设备类型</text>
+      <image class="imgRightClass2" src="../../images/img_right_go.png"></image>
+    </view>
+  </picker>
+
+  <picker class="pickerView" bindchange="bindPickerChange3" value="{{index2}}" range="{{orderTypeList}}">
+    <view class="horTopView">
+      <text class="textBlue3" wx:if="{{index2 != 0 }}"> {{orderTypeList[index2]}}</text>
+      <text class="textBlue3" wx:if="{{index2 == 0}}"> 工单类型</text>
+      <image class="imgRightClass2" src="../../images/img_right_go.png"></image>
+    </view>
+  </picker>
+</view>
+
+
+<scroll-view class="scrollView" bindscrolltolower='onDownListener' scroll-x="false" scroll-y="true"
+  style="height:{{viewH}}px,width:100%">
+  <view wx:for="{{workList}}" data-index='{{index}}' wx:for-item="item" bindtap='itemClick'>
+    <view class='itemView'>
+      <view class="horTopClass">
+        <text class='iTextTitle'>{{item.info.devicename}}</text>
+        <text class='iTextTitle2'>（ {{item.type}} ）</text>
+        <text class='cTextType1' wx:if="{{item.status == 0}}">待派单</text>
+        <text class='cTextType2' wx:if="{{item.status == 1}}">已派单</text>
+        <text class='cTextType3' wx:if="{{item.status == 2}}">已处理</text>
+        <text class='cTextType4' wx:if="{{item.status == 3}}">已结单</text>
+      </view>
+
+      <view class="horView2">
+        <view class="verView2">
+          <text class='iTextName'>工单描述:{{item.info.description}}</text>
+          <text class='iTextName'>建单人员:{{item.info.receiveusername}}</text>
+          <text class='iTextName'>建单时间:{{item.createdAt}}</text>
+        </view>
+        <view class="verView3">
+          <button class='btn1' style="width:80px" bindtap="goInfo" data-index='{{index}}' >
+            <view>查看</view>
+          </button>
+          <button class='btn2' style="width:80px" data-index='{{index}}' bindtap="showPop" wx:if="{{item.status == 0}}">
+            <view>派单</view>
+          </button>
+          <button class='btn2' style="width:80px" data-index='{{index}}' bindtap="showPop2" wx:if="{{item.status == 2}}">
+            <view>结单</view>
+          </button>
+        </view>
+      </view>
+
+
+    </view>
+    <view class="linerView"></view>
+  </view>
+</scroll-view>
+
+

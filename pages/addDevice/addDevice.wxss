@@ -8,7 +8,7 @@
 }
 .textBlue{
   margin-left: 17px;
-color: #84d3be;
+color: #166ead;
 font-size: 15px;
 text-align: left;
 font-family: PingFangSC-regular;
@@ -52,7 +52,7 @@ border: 1px solid rgba(220, 224, 231, 100);
  }
  ._left{
   margin-left: 40rpx;
-  color: #84d3be;
+  color: #166ead;
   height: 50px;
   margin-left: 40rpx;
   font-size: 16px;
@@ -72,7 +72,7 @@ border: 1px solid rgba(220, 224, 231, 100);
  .btnView{
   height: 43px;
   margin-top: 15px;
-  background-color: #84d3be;
+  background-color: #166ead;
   color: #ffffff;
   border-radius: 4px;
   display: flex;
@@ -123,12 +123,12 @@ border: 1px solid rgba(220, 224, 231, 100);
     background-color:#fff;
     text-align: center;
     display: flex;
-    border: 1px solid #84d3be;
+    border: 1px solid #166ead;
     align-items: center;
     justify-content: center;
     font-size: 14px;
     margin-left: 10px;
-    color:#84d3be;
+    color:#166ead;
     }
     
     .horBlueView2{

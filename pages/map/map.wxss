@@ -1,0 +1,91 @@
+/* pages/map/map.wxss */
+.horView3{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+  height: 50px;
+}
+
+
+.cTextType1{
+  width: 45px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  color: #02603A 100%;
+  margin-right: 10px;
+  line-height: 20px;
+  margin-left: 15px;
+  background-color: #2FC589;
+  border-radius: 6px 5px 6px 6px;
+background-color: #2FC589;
+}
+
+.iTextTitle{
+  font-size: 16px;
+  color: #000;
+}
+
+.cTextType2{
+  width: 45px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  color: #FC4868 ;
+  margin-right: 10px;
+  line-height: 20px;
+  margin-left: 15px;
+  background-color: #f6d8e0;
+  border-radius: 6px 5px 6px 6px;
+background-color: #f6d8e0;
+}
+
+.cTextType3{
+  width: 45px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  margin-right: 10px;
+  line-height: 20px;
+  margin-left: 15px;
+  background-color: #fff;
+  border-radius: 6px 5px 6px 6px;
+background-color: #fff;
+}
+
+.verView2{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.horView2{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.iTextName{
+  font-size: 15px;
+  color: #838181;
+  margin-left: 15px;
+  text-align: left;
+}
+
+
+.ztView{
+  height: 35px;
+  border-radius: 4px;
+  background-color: #84d3be;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #ffffff;
+  line-height: 35px;
+  font-size: 13px;
+  margin-top: 10px;
+  }

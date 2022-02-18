@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "维保工单",
+  "usingComponents": {"wux-row": "../../dist/row/index",
+    "wux-col": "../../dist/col/index",
+    "wux-popup": "../../dist/popup/index",
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-cascader": "../../dist/cascader/index"}
+}

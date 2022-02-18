@@ -1,0 +1,311 @@
+/* pages/work/work.wxss */
+.horTopClass{
+  width: 100%;
+  height: 46px;
+  display: flex;
+  padding-left: 10px;
+}
+.textBlue{
+line-height: 46px;
+color: #000000;
+font-size: 17px;
+text-align: left;
+font-family: PingFangSC-regular;
+}
+
+.imgRightClass{
+  height: 20px;
+  width: 20px;
+  align-items: center;
+  margin-top: 11px;
+  position: absolute;
+  right: 10px;
+}
+
+
+.homeViewRed{
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 15px;
+  background-color: #e44d44;
+  position: relative;
+  align-items: center;
+  margin-top: 10px;
+  text-align: center;
+  color: #FFF;
+}
+.imgRightClass2{
+  height: 12px;
+  width: 12px;
+  align-items: center;
+  margin-top: 9px;
+}
+.textBlue2{
+  line-height: 30px;
+color: #000000;
+font-size: 14px;
+text-align: left;
+font-family: PingFangSC-regular;
+}
+.popTitile{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.verView21 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.textBlue3{
+  width: 80%;
+  line-height: 30px;
+color: #000000;
+font-size: 14px;
+text-align: left;
+font-family: PingFangSC-regular;
+}
+.areaView {
+  height: 100px;
+  width: 75%;
+  border-radius: 6px;
+  margin-left: 10px;
+  background-color: #f5f7f9;
+  color: rgba(136, 136, 136, 100);
+  font-size: 14px;
+  text-align: left;
+  border: 1px solid rgba(230, 230, 230, 57);
+  padding: 10px;
+}
+.horTopClass2 {
+  width: 100%;
+  display: flex;
+  padding-left: 15px;
+  margin-top: 15PX;
+}
+.btnView1{
+  height: 43px;
+  background-color: #1784FC;
+  color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+ }
+.popView{
+  height: 300px;
+}
+.cascaderView{
+  height: 300px;
+}
+
+.horTopView2{
+  width: 100%;
+  display: flex;
+  margin-left: 15px;
+  line-height: 30px;
+}
+
+.pickerView{
+  width: 45%;
+  height: 35px;
+}
+.horBoxView{
+  width: 100%;
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  box-sizing:border-box;
+  display: flex;
+  justify-content: space-around;
+  height: 35px;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+.horTopView{
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  border: 2rpx solid #ddd;
+  border-radius: 6rpx;
+  justify-content: center;
+}
+
+.horView3{
+  display: flex;
+  justify-content: space-between;
+}
+.itemView{
+  height: 140px;
+}
+
+.iTextTitle{
+  height: 40px;
+  color: #101010;
+  font-size: 15px;
+  line-height: 40px;
+  margin-left: 10px;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  }
+  .iTextTitle2{
+    height: 40px;
+    color: #101010;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: left;
+    font-family: PingFangSC-regular;
+    }
+  .iTextName{
+    font-size: 14px;
+    line-height: 25px;
+    color: #101010;
+    margin-left: 15px;
+  }
+  .iTextName4{
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    line-height: 25px;
+    color: #101010;
+    margin-left: 15px;
+  }
+  .linerView{
+    box-sizing:border-box;
+    width: 100%;
+    height: 5px;
+    background-color: #f5f7f9;
+    margin-top: 5px;
+  }
+  
+
+  .cTextType1{
+    width: 45px;
+    height: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: #979797 ;
+    margin-right: 10px;
+    line-height: 20px;
+    margin-left: 15px;
+    position: absolute;
+    right: 10px;
+  }
+
+  .cTextType3{
+    width: 45px;
+    height: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: #166ead;
+    margin-right: 10px;
+    line-height: 20px;
+    margin-left: 15px;
+    position: absolute;
+    right: 10px;
+  }
+
+  .cTextType2{
+    width: 45px;
+    height: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: #FF9263;
+    margin-right: 10px;
+    line-height: 20px;
+    margin-left: 15px;
+    position: absolute;
+    right: 10px;
+  }
+
+  .cTextType4{
+    width: 45px;
+    height: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: #166ead;
+    margin-right: 10px;
+    line-height: 20px;
+    margin-left: 15px;
+    position: absolute;
+    right: 10px;
+  }
+
+  .verView2{
+    width: 80%;
+    height: 75px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .verView3{
+    height: 75px;
+    margin-top: 20px;
+    display: flex;
+    margin-right: 15px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .horView2{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .btn2{
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #166ead;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 7.5px;
+    color: #ffffff;
+    }
+  
+    .btn1{
+      height: 30px;
+      line-height: 30px;
+      border-radius: 4px 4px 4px 4px;
+      border: 1px solid rgba(61, 141, 255, 100);
+      background-color: #ffffff;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      margin-left: 10px;
+      color: #166ead;
+      margin-top: 7.5px;
+      }
+  
+      .pickerView2{
+        width: 100%;
+        height: 30px;
+        padding-left: 15px;
+      }
+      .imgRightClass3 {
+        height: 12px;
+        width: 12px;
+        align-items: center;
+        margin-top: 9px;
+        margin-left: 10px;
+      }

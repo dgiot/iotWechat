@@ -300,7 +300,7 @@ Page({
         var that = this;
         that.onMsg();
         wx.navigateTo({
-            url: '../device/pages/addDevice/addDevice' //'../../pages/addDevice/addDevice'
+            url: '../../pages/addDevice/addDevice' //'../../pages/addDevice/addDevice'
         })
     },
 
@@ -311,7 +311,7 @@ Page({
         var that = this;
         that.onMsg();
         wx.navigateTo({
-            url: '../device/pages/map/map' //   '../../pages/map/map'
+            url: '../../pages/map/map' //   '../../pages/map/map'
         })
     },
 
@@ -323,7 +323,7 @@ Page({
         var that = this;
         that.onMsg();
         wx.navigateTo({
-            url: '../device/pages/work/work'
+            url: '../../pages/work/work'
         })
     },
 
@@ -334,7 +334,7 @@ Page({
         var that = this;
         that.onMsg();
         wx.navigateTo({
-            url: '../device/pages/userList/userList'
+            url: '../../pages/userList/userList'
         })
     },
 

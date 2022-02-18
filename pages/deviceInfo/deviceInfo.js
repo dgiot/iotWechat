@@ -1,5 +1,5 @@
 // pages/deviceInfo/deviceInfo.js
-import * as echarts from '../../ec-canvas/echarts';
+import * as echarts from '../../ec-canvas/echarts.min.js';
 var util = require('../../utils/util.js');
 const app = getApp()
 let chart = null;

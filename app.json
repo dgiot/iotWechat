@@ -6,14 +6,17 @@
     "pages/index/index",
     "pages/deviceInfo/deviceInfo",
     "pages/addDevice/addDevice",
+    "pages/map/map",
+    "pages/work/work",
+    "pages/userList/userList",
     "pages/logs/logs",
     "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#166ead",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "selectedColor": "#196ead",

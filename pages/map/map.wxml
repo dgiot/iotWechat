@@ -1,0 +1,21 @@
+<map id="map"  scale="4" controls="{{controls}}"
+  bindmarkertap="clickMarker" markers="{{markers}}" style="width: 100%; height:100vh;"></map>
+
+  <wux-popup  position="bottom" visible="{{ visible2 }}" bind:close="onClose1">
+    <view class="horView3">
+  <text class='iTextTitle'>{{deviceName}}</text>
+  <text class='cTextType1' wx:if="{{ deviceType =='在线'}}">在线</text>
+  <text class='cTextType2' wx:if="{{ deviceType =='离线'}}">离线</text>
+  <text class='cTextType3' wx:if="{{ deviceType ==''}}"></text>
+</view>
+
+<view class="horView2">
+  <view class="verView2">
+    <text class='iTextName'>设备编号：{{deviceCode}}</text>
+    <text class='iTextName'>所属单位：{{deviceCompany}}</text>
+  </view>
+
+  <button class="ztView" bindtap="goInfo" style="width:80px">查看</button>
+<view style="height:80px"></view>
+</view>
+  </wux-popup>
