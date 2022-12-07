@@ -120,8 +120,6 @@ Page({
                 wx.hideLoading()
                 console.log("home", res);
                 if (res.statusCode == 200) {
-
-
                     that.setData({
                         carousel: res.data.carousel,
                         unPanalarmDevice: res.data.unPanalarmDevice,

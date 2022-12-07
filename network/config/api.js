@@ -1,11 +1,10 @@
-var WxApiRoot =   'https://pump.iotn2n.com/' 
+var WxApiRoot =   'https://dev.iotn2n.com/' 
 module.exports = {
 
   //用户相关
   // AuthLogin: WxApiRoot + '/iotapi/login', //账号登录
     // 产品相关
     ProductQuery:WxApiRoot+'iotapi/classes/Product',
-   
     DeviceQuery:WxApiRoot+"iotapi/classes/Device",
     ReportQuery:WxApiRoot+"iotapi/classes/View",  //报告
     EvidenceQuery:WxApiRoot+'iotapi/classes/Evidence',

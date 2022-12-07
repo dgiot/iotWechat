@@ -15,14 +15,14 @@ App({
   },
   globalData: {
     userInfo: null,
-    info:'',
-    token:'',
-    productList:[],
-    departmentList:[],
-    title1:'所有部门',
-    toUser:false,
-   httpUrl: 'https://prod.iotn2n.com/',     
-   serverUrl:'https://prod.iotn2n.com',  
-    tag:'',
+    info: '',
+    token: '',
+    productList: [],
+    departmentList: [],
+    title1: '所有部门',
+    toUser: false,
+    httpUrl: 'https://dev.iotn2n.com/',
+    serverUrl: 'https://dev.iotn2n.com',
+    tag: '',
   }
 })

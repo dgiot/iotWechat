@@ -178,20 +178,20 @@ Page({
    */
   onShow: function () {
     var that = this;
-    var time2Num = Date.parse(new Date());
-    console.log('time2Num=' + time2Num)
-    var time2Text = util.formatTime(new Date());
-    var time1Num = time2Num - 604800000;
-    var time1Text = util.formatTimes(time1Num, 'Y-M-D h:m');
+    // var time2Num = Date.parse(new Date());
+    // console.log('time2Num=' + time2Num)
+    // var time2Text = util.formatTime(new Date());
+    // var time1Num = time2Num - 604800000;
+    // var time1Text = util.formatTimes(time1Num, 'Y-M-D h:m');
     this.data.realtime = setInterval(that.onDeviceType,3000);
-    that.setData({
-      displayValue2: time2Text,
-      displayValue1: time1Text,
-      displayValue1Num:time1Num,
-      displayValue2Num:time2Num,
-      value1:time1Text,
-      value2:time2Text,
-    })
+    // that.setData({
+    //   displayValue2: time2Text,
+    //   displayValue1: time1Text,
+    //   displayValue1Num:time1Num,
+    //   displayValue2Num:time2Num,
+    //   value1:time1Text,
+    //   value2:time2Text,
+    // })
     wx.showLoading()
     this.onChartTimeData();
   },
@@ -345,7 +345,7 @@ Page({
     
     var that = this;
     wx.request({
-      url: app.globalData.httpUrl + 'iotapi/app/' + that.data.deviceId, //仅为示例，并非真实的接口地址
+      url: app.globalData.httpUrl + 'iotapi/devicecard/' + that.data.deviceId, //仅为示例，并非真实的接口地址
       header: {
         'sessionToken': app.globalData.token //读取cookie // 默认值
       },
