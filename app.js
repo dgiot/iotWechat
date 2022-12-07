@@ -21,8 +21,8 @@ App({
     departmentList: [],
     title1: '所有部门',
     toUser: false,
-    httpUrl: 'https://dev.iotn2n.com/',
-    serverUrl: 'https://dev.iotn2n.com',
+    httpUrl: 'http://127.0.0.1:5080/',
+    serverUrl: 'http://127.0.0.1:5080',
     tag: '',
   }
 })

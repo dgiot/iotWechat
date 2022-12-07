@@ -1,4 +1,4 @@
-var WxApiRoot =   'https://dev.iotn2n.com/' 
+var WxApiRoot =   'http://127.0.0.1:5080/' 
 module.exports = {
 
   //用户相关

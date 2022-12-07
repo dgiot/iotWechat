@@ -19,7 +19,7 @@ data-mode="datetime" bind:confirm="onConfirm2" bind:visibleChange="onVisibleChan
     <text class='iTextName'>所属单位：{{deviceCompany}}</text>
   </view>
 
-  <button class="ztView" bindtap="goZt" style="width:80px">组态</button>
+  <!-- <button class="ztView" bindtap="goZt" style="width:80px">-</button> -->
 
 </view>
 

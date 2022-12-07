@@ -44,4 +44,4 @@ Wux Weapp  ----https://wux-weapp.github.io/wux-weapp-docs/#/introduce
 
 |联系方式 | 地址 |
 |--------|---------|
-|微信    | ![](https://prod.dgiotcloud.com/group1/default/20220111/15/43/7/wx)      |
+|微信    | ![](http://127.0.0.1:5080/group1/default/20220111/15/43/7/wx)      |

@@ -25,7 +25,7 @@ Page({
       onInit: function (canvas, width, height, dpr) {
         chart2 = echarts.init(canvas, null, {
           width: width,
-          height: 300,
+          height: 180,
           devicePixelRatio: dpr // new
         });
         canvas.setChart(chart2);
@@ -33,8 +33,8 @@ Page({
       }
     },
     choiceList: [],
-    textIndex:0,
-    choiceTextList:[],
+    textIndex: 0,
+    choiceTextList: [],
     displayValue1: '开始时间',
     displayValue2: '结束时间',
     itemStyle: {
@@ -52,8 +52,8 @@ Page({
     deviceType: '',
     vHeight: 0,
     deviceId: '',
-    productid:'',
-    devaddr:'',
+    productid: '',
+    devaddr: '',
     listdata: [],
     value1: [],
     value2: [],
@@ -63,7 +63,7 @@ Page({
     current: 'tab1',
     tabs: [{
         key: 'tab1',
-        title: '实时状态',
+        title: '实时数据',
         content: 'Content of tab 1',
       },
       // {
@@ -77,7 +77,7 @@ Page({
         content: 'Content of tab 3',
       },
     ],
-    realtime:''
+    realtime: ''
   },
 
   /**
@@ -90,8 +90,8 @@ Page({
       success: function (res) {
         that.setData({
           deviceId: options.deviceId,
-          productid:options.productid,
-          devaddr:options.devaddr,
+          productid: options.productid,
+          devaddr: options.devaddr,
           vHeight: res.windowHeight - (res.statusBarHeight + 130)
         });
       }
@@ -115,12 +115,12 @@ Page({
     })
   },
   setValue: function (values, key, mode) {
-    if( values.date =='undefined' || values.date == null ){
+    if (values.date == 'undefined' || values.date == null) {
       return
     }
     var that = this;
     this.setData({
-      displayValue1Num:values.date,
+      displayValue1Num: values.date,
       value1: values.value,
       displayValue1: values.label,
     })
@@ -137,7 +137,7 @@ Page({
       mode
     } = e.currentTarget.dataset
     this.setValue2(e.detail, 2, mode)
-  
+
   },
   onVisibleChange2: function (e) {
     this.setData({
@@ -145,15 +145,15 @@ Page({
     })
   },
   setValue2: function (values, key, mode) {
-    console.log(`onConfirm2`,values)
-    if( values.date =='undefined' || values.date == null ){
+    console.log(`onConfirm2`, values)
+    if (values.date == 'undefined' || values.date == null) {
       return
     }
     var that = this;
     this.setData({
-      choiceList:[],
-      choiceTextList:[],
-      displayValue2Num:values.date,
+      choiceList: [],
+      choiceTextList: [],
+      displayValue2Num: values.date,
       value2: values.value,
       displayValue2: values.label,
     })
@@ -183,7 +183,7 @@ Page({
     // var time2Text = util.formatTime(new Date());
     // var time1Num = time2Num - 604800000;
     // var time1Text = util.formatTimes(time1Num, 'Y-M-D h:m');
-    this.data.realtime = setInterval(that.onDeviceType,3000);
+    this.data.realtime = setInterval(that.onDeviceType, 3000);
     // that.setData({
     //   displayValue2: time2Text,
     //   displayValue1: time1Text,
@@ -196,83 +196,88 @@ Page({
     this.onChartTimeData();
   },
 
-  onChartTimeData:function(){
+  onChartTimeData: function () {
     var that = this;
     wx.request({
       url: app.globalData.httpUrl + 'iotapi/echart/' + that.data.deviceId + '?starttime=' + that.data.displayValue1Num +
-        '&endtime=' + that.data.displayValue2Num + '&interval=1d&keys=*&limit=10&function=last&style=line',
+        '&endtime=' + that.data.displayValue2Num + '&interval=1h&keys=*&limit=10&function=last&style=line',
       header: {
         'sessionToken': app.globalData.token //读取cookie // 默认值
       },
       success(res) {
         wx.hideLoading()
-        if( res.statusCode == 200 ){
-        if (res.data.chartData.child.length > 0) {
+        if (res.statusCode == 200) {
+          if (res.data.chartData.child.length > 0) {
 
-          var childData = res.data.chartData.child;
+            var childData = res.data.chartData.child;
 
-          var cList = [];
-          var textList = [];
+            var cList = [];
+            var textList = [];
 
-          for (var i = 0; i < childData.length; i++) {
+            for (var i = 0; i < childData.length; i++) {
 
-            var legendData = [];
-            var seriesData = [];
-            var itemData = [];
-            var seriesItem = {};
-            var xAxisData = [];
-            legendData.push(childData[i].columns[1])
-            textList.push(childData[i].columns[1])
+              var legendData = [];
+              var seriesData = [];
+              var itemData = [];
+              var seriesItem = {};
+              var xAxisData = [];
+              legendData.push(childData[i].columns[1])
+              textList.push(childData[i].columns[1])
 
-            for (const key in childData[i].rows) {
-              xAxisData.push(childData[i].rows[key]['日期'])
-              itemData.push(childData[i].rows[key][childData[i].columns[1]])
+              for (const key in childData[i].rows) {
+                xAxisData.push(childData[i].rows[key]['日期'])
+                itemData.push(childData[i].rows[key][childData[i].columns[1]])
+              }
+
+              // seriesItem.name = childData[i].columns[1];
+              seriesItem.type = 'line';
+
+              seriesItem.data = itemData;
+              seriesItem.itemStyle = that.data.itemStyle
+              seriesData.push(seriesItem)
+
+              var option = {
+                title: {},
+                tooltip: {},
+                grid:{
+                  left:'16%',
+                  // right:'5%',
+                  top:'5%',
+                  // bottom:'5%',
+                  
+                },
+                legend: {
+                  data: legendData
+                },
+                xAxis: {
+                  data: xAxisData
+                },
+                yAxis: {},
+                series: seriesData
+              };
+              cList.push(option)
             }
-
-           // seriesItem.name = childData[i].columns[1];
-            seriesItem.type = 'bar';
-
-            seriesItem.data = itemData;
-            seriesItem.itemStyle = that.data.itemStyle
-            seriesData.push(seriesItem)
-
-            var option = {
-              title: {},
-              tooltip: {},
-              legend: {
-                data: legendData
-              },
-              xAxis: {
-                data: xAxisData
-              },
-              yAxis: {},
-              series: seriesData
-            };
-            cList.push(option)
-          
+            // 使用刚指定的配置项和数据显示图表。
+            that.setData({
+              choiceTextList: textList,
+              choiceList: cList
+            })
+            setTimeout(item => {
+              chart2.setOption(that.data.choiceList[0]);
+            }, 1000)
           }
-          // 使用刚指定的配置项和数据显示图表。
-          
-          that.setData( {
-            choiceTextList:textList,
-            choiceList:cList
-          } )
-          setTimeout(item => {
-            chart2.setOption(that.data.choiceList[0]);
-           },1000)
-        }
-      }else if(res.statusCode == 401){
-        wx.reLaunch({
-            url: '../../pages/index/index' 
+        } else if (res.statusCode == 401) {
+          wx.reLaunch({
+            url: '../../pages/index/index'
           })
-       }
+        }
       }
     })
 
 
   },
 
-  bindPickerChange: function(e) {
+  bindPickerChange: function (e) {
     var that = this;
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -284,8 +289,7 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-  },
+  onHide: function () {},
 
   /**
    * 生命周期函数--监听页面卸载
@@ -312,7 +316,48 @@ Page({
     })
   },
   onSwiperChange(e) {
-    console.log('onSwiperChange', e)
+    console.log('onSwiperChange', e, this.data.value1, this.data.value2)
+    if (this.data.value1.length <= 0) {
+      var date = new Date(new Date().getTime() - 1000*60*60*24)
+      var year = date.getFullYear() // 年
+      var month = date.getMonth()  // 月
+      var day = date.getDate(); // 日
+      var hour = date.getHours(); // 时
+      var minutes = date.getMinutes(); // 分
+      console.log(year,month,day,hour,minutes,date.getTime());
+      let value1 = [year,month,day,hour,minutes]
+      month = month+1 <10 ?'0'+(month+1) : (month+1)
+      day = day+1 <10 ?'0'+(day) : (day)
+      hour = hour+1 <10 ?'0'+(hour) : (hour)
+      minutes = minutes+1 <10 ?'0'+(minutes) : (minutes)
+      let displayvalue = year + '-'+ month +'-' +day + ' ' +hour+':'+minutes
+      this.setData({
+        value1,
+        displayValue1:displayvalue,
+        displayValue1Num:date.getTime()
+      })
+    }
+    if (this.data.value2.length <= 0) {
+      var date = new Date()
+      var year = date.getFullYear() // 年
+      var month = date.getMonth()  // 月
+      var day = date.getDate(); // 日
+      var hour = date.getHours(); // 时
+      var minutes = date.getMinutes(); // 分
+      console.log(year,month,day,hour,minutes,date.getTime());
+      let value2 = [year,month,day,hour,minutes]
+      month = month+1 <10 ?'0'+(month+1) : (month+1)
+      day = day+1 <10 ?'0'+(day) : (day)
+      hour = hour+1 <10 ?'0'+(hour) : (hour)
+      minutes = minutes+1 <10 ?'0'+(minutes) : (minutes)
+      var displayvalue = year + '-'+ month +'-' +day + ' ' +hour+':'+minutes
+      this.setData({
+        value2,
+        displayValue2:displayvalue,
+        displayValue2Num:date.getTime()
+      })
+    }
+    this.onChartTimeData()
     const {
       current: index,
       source
@@ -328,7 +373,7 @@ Page({
       })
     }
   },
-/**
+  /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
@@ -340,9 +385,9 @@ Page({
   },
 
   //获取实时状态
-  
+
   onDeviceType: function () {
-    
+
     var that = this;
     wx.request({
       url: app.globalData.httpUrl + 'iotapi/devicecard/' + that.data.deviceId, //仅为示例，并非真实的接口地址
@@ -367,7 +412,7 @@ Page({
 
           that.setData({
             listdata: res.data.data,
-    
+
           })
 
           // var option = {
@@ -394,14 +439,14 @@ Page({
 
 
   /**
- * 跳转到设备详情
- */
-goZt:function(e){
-  var that = this;
-  wx.navigateTo({
-    url: '../../pages/zutai/zutai?devaddr='+that.data.devaddr+'&productid='+that.data.productid 
-  })
-},
+   * 跳转到设备详情
+   */
+  goZt: function (e) {
+    var that = this;
+    wx.navigateTo({
+      url: '../../pages/zutai/zutai?devaddr=' + that.data.devaddr + '&productid=' + that.data.productid
+    })
+  },
 
   //查询设备信息··············
   onQueryDeviceType: function () {
@@ -444,7 +489,7 @@ goZt:function(e){
             deviceName: mTimeList[0].name,
             deviceCode: mTimeList[0].devaddr,
             deviceCompany: role,
-          
+
           })
         }
       }
