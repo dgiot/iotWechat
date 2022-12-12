@@ -317,7 +317,7 @@ goSetting:function(e){
   var mId = mList[_index].objectId;
   var pId = mList[_index].product.objectId
   wx.navigateTo({
-    url: '../../pages/deviceSetting/deviceSetting?deviceId='+mId+'&productid='+pId+'&devaddr='+mList[_index].devaddr
+    url: '/pages/deviceSetting/deviceSetting?deviceId='+mId+'&productid='+pId+'&devaddr='+mList[_index].devaddr
   })
 },
 

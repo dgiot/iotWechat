@@ -1,4 +1,4 @@
-var WxApiRoot =   'http://127.0.0.1:5080/' 
+var WxApiRoot =   'https://dhiot.donghuanet.com:8001/' 
 module.exports = {
 
   //用户相关

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "wux-popup-select": "../../dist/popup-select/index",
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-button": "../../dist/button/index"
+  }
+}

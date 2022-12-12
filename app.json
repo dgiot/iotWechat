@@ -9,6 +9,7 @@
     "pages/map/map",
     "pages/work/work",
     "pages/userList/userList",
+    "pages/deviceSetting/deviceSetting",
     "pages/logs/logs",
     "pages/login/login"
   ],

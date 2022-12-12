@@ -7,41 +7,41 @@
 
  | 用户名      | 密码        |   体验二维码 |
   | ----------- | ----------- |-------------|
-  | dgiot_admin | dgiot_admin |  ![](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_wechat.jpg) |
+  | dgiot_dev | dgiot_dev |  ![](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/dgiot_wechat.jpg) |
   
 
 ### 页面展示
 
- | 首页      | 设备        |   告警 |
-  | ----------- | ----------- |-------------|
-  | ![](http://prod.dgiotcloud.com/group1/default/20220111/15/49/7/home)|![](http://prod.dgiotcloud.com/group1/default/20220111/15/50/7/device) | ![](http://prod.dgiotcloud.com/group1/default/20220111/15/50/7/clarm) |
+ | 首页      | 设备        |  
+  | ----------- | ----------- |
+  | ![](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A6%96%E9%A1%B5.png)|![](http://dgiot-1253666439.cos.ap-shanghai-fsi.myqcloud.com/dgiot_release/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86.png) | 
 
 
 ### 接口说明
 #### 登录
-  openid登录 -- (http://prod.iotn2n.com/swagger/#/_User/pput_classes_user_id)
+  openid登录 -- (http://prod.dgiotcloud.cn/dgiot_swagger/#/_User/pput_classes_user_id)
   
-  微信绑定账号登录 --（http://prod.iotn2n.com/swagger/#/Wechat/post_wechat）
+  微信绑定账号登录 --（http://prod.dgiotcloud.cn/dgiot_swagger/#/Wechat/post_wechat）
   
-  微信登录 --（http://prod.iotn2n.com/swagger/#/Wechat/get_wechat）
+  微信登录 --（http://prod.dgiotcloud.cn/dgiot_swagger/#/Wechat/get_wechat）
   
 #### 设备 <br/>
-   设备查询 --（http://prod.iotn2n.com/swagger/#/Device/get_classes_device）
+   设备查询 --（http://prod.dgiotcloud.cn/dgiot_swagger/#/Device/get_classes_device）
    
 --- 部门 <br/>
-   部门查询 --（http://prod.iotn2n.com/swagger/#/_Role/get_roletree）
+   部门查询 --（http://prod.dgiotcloud.cn/dgiot_swagger/#/_Role/get_roletree）
    
 #### 产品 <br/>
-  产品查询 --（http://prod.iotn2n.com/swagger/#/Product/get_classes_product）
+  产品查询 --（http://prod.dgiotcloud.cn/dgiot_swagger/#/Product/get_classes_product）
   
 #### 获取部门token <br/>
-  拉取获取对应部门token--（http://prod.iotn2n.com/swagger/#/_User/get_token）
+  拉取获取对应部门token--（http://prod.dgiotcloud.cn/dgiot_swagger/#/_User/get_token）
 
 ### 导入外部组件库
 Wux Weapp  ----https://wux-weapp.github.io/wux-weapp-docs/#/introduce
 
 ### 联系方式
 
-|联系方式 | 地址 |
+<!-- |联系方式 | 地址 |
 |--------|---------|
-|微信    | ![](http://127.0.0.1:5080/group1/default/20220111/15/43/7/wx)      |
+|微信    | ![](https://dhiot.donghuanet.com:8000/group1/default/20220111/15/43/7/wx)      | -->

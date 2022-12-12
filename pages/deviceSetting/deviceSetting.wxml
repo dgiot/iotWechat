@@ -1,0 +1,35 @@
+<view class="">
+  <form catchsubmit="formSubmit" catchreset="formReset">
+    <view class="area">
+      <view wx:for="{{list}}" wx:key="{{item.name}}" class="form_item">
+        <view class="form_item_left">{{item.label}}:</view>
+        <view class="form_item_right">
+          <picker wx:if="{{item.type=='select'}}" class="pickerView" bindchange="bindSelectEvent" data-name="{{item.name}}" data-index="{{index}}" value="{{item.index}}" range-key="label" range="{{item.options}}">
+            <view class="horTopView">
+              <text class="textGrey" wx:if="{{item.index == -1}}"> 请选择{{item.label}}</text>
+              <text class="textBlack" wx:elif="{{item.index != -1}}"> {{item.options[item.index].label}}</text>
+              <image class="imgRightClass" src="../../images/img_right_go.png"></image>
+            </view>
+          </picker>
+          <radio-group class="radio_wrap"  wx:if="{{item.type=='radios'}}" bindchange="bindRadioChange" data-name="{{item.name}}">
+            <label class="radio_item" wx:for-item="item1" wx:for="{{item.options}}" wx:key="{{item1.value}}">
+              <view class="weui-cell__hd">
+                <radio value="{{item1.value}}" checked="{{form[item.name]==item1.value}}" />
+              </view>
+              <view class="weui-cell__bd">{{item1.label}}</view>
+            </label>
+          </radio-group>
+          <input wx:elif="{{item.type=='input-text'}}" class="horTopView" name='class' bindinput="handleInputText" value="{{item.value}}" data-name="{{item.name}}"  placeholder="{{'请输入'+item.label}}"></input>
+          <input wx:elif="{{item.type=='input-number'}}" type="number" class="horTopView" name='class' bindinput="handleInputNumber" value="{{item.value}}" data-name="{{item.name}}"  placeholder="{{'请输入'+item.label}}"></input>
+      
+        </view>
+        <!-- <view class="page-section-title">switch</view> -->
+
+      </view>
+
+    </view>
+    <view class="btn-area">
+      <button style="width: 90%;" class="btns" bindtap="handleSubmit">发送</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,94 @@
+/* pages/deviceSetting/deviceSetting.wxss */
+page{
+  background: -webkit-linear-gradient(top, #166ead, #366faa, #ffffff);
+}
+.area {
+  width: 100%;
+  overflow-y: scroll;
+  height: calc(100vh - 120rpx);
+  background-color: 22, 110, 173;
+}
+.form_item:nth-child(1){
+  border-top: 0.5px solid #ccc;
+}
+.form_item {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 4rpx;
+  border-bottom: 0.5px solid #ccc;
+}
+
+.pickerView{
+  width: 90%;
+  height: 35px;
+}
+.horTopView{
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  margin: 0 10rpx;
+  justify-content: space-between;
+  border: 2rpx solid #ccc;
+  border-radius: 6rpx;
+  justify-content: center;
+}
+.textGrey{
+  color: #aaa;
+  font-size: 14px;
+}
+.textBlack{
+  /* font-weight: 600; */
+}
+.imgRightClass{
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: 8px;
+  right: 4px;
+  /* align-items: center; */
+  /* margin-top: 9px; */
+  /*  */
+}
+
+.form_item_left {
+  text-align: center;
+  flex: 3;
+  color: #fff;
+  font-size: 16px;
+  border-right:0.5px solid #ccc;
+}
+
+.form_item_right {
+  flex: 7;
+  text-align: center;
+}
+
+.btn-area {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+}
+
+.btns {
+  line-height: 70rpx;
+  text-align: center;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 30rpx;
+  width: 100%;
+  border-radius: 100rpx;
+  background: linear-gradient(to right top, #6183dd, #163f5c);
+  margin-top: 10rpx;
+}
+/* 单选框 */
+.radio_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10rpx;
+}
+.radio_item {
+  display: flex;
+  margin: 4rpx 8rpx;
+}
