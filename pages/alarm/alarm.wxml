@@ -2,7 +2,7 @@
 
 <view class="verView21">
   <text class="popTitile">报警详情</text>
-  <view class="verView2" wx:for-item="mItem1" wx:key="mItem1" wx:for="{{mItem.con}}">
+  <view class="verView2" wx:for-item="mItem1" wx:key="mItem1" wx:for="{{mItem.content}}">
     <text class='iTextName'>{{mItem1}}</text>
   </view>
   <text class='iTextName'>处理结果:{{mProcess}}</text>
@@ -61,18 +61,22 @@ style="height:{{viewH}}px,width:100%">
 <view wx:for="{{workList}}" data-index='{{index}}' wx:for-item="item" bindtap='itemClick'>
   <view class='itemView'>
     <view class="horTopClass">
-      <text class='iTextTitle'>{{item.devicename}}</text>
-      <text class='cTextType3' wx:if="{{item.Public == true}}">已处理</text>
-      <text class='cTextType4' wx:if="{{item.Public == false}}">未处理</text>
+      <text class='iTextTitle'>{{item.productname}}</text>
+      <text class='cTextType1' wx:if="{{item.status == 0}}">未确认</text>
+      <text class='cTextType2' wx:if="{{item.status == 1}}">误报</text>
+      <text class='cTextType3' wx:if="{{item.status == 2}}">手动恢复</text>
+      <text class='cTextType4' wx:if="{{item.status == 3}}">自动恢复</text>
     </view>
 
-    <view class="verView2" wx:for-item="mItem" wx:key="mItem" wx:for="{{item.con}}">
-      <text class='iTextName'>{{mItem}}</text>
+    <view class="verView2" >
+      <!-- wx:for-item="mItem" wx:key="mItem" wx:for="{{item.con}}" -->
+      <text class='iTextName'>{{item.content.alarm_createdAt}}</text>
     </view>
     <view class="horView2">
       <view style="width:70%"></view>
-      <button class='btn1' wx:if="{{item.Public == true}}" style="width:80px" bindtap="goInfo" data-index='{{index}}'>
-        <view>查看</view>
+      <!-- wx:if="{{item.Public == true}}" -->
+      <button class='btn1'  style="width:80px;background-color: #166ead;color: #fff;" bindtap="goInfo" data-index='{{index}}'>
+        <view >查看</view>
       </button>
       <button class='btn2' style="width:80px" data-index='{{index}}' bindtap="showPop"
         wx:if="{{item.Public == false}}">
