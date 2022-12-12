@@ -21,8 +21,8 @@ App({
     departmentList: [],
     title1: '所有部门',
     toUser: false,
-    httpUrl: 'https://dhiot.donghuanet.com:8001/',
-    serverUrl: 'https://dhiot.donghuanet.com:8001',
+    httpUrl: 'http://127.0.0.1:5080/',
+    serverUrl: 'http://127.0.0.1:5080',
     tag: '',
   }
 })
