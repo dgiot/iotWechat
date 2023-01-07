@@ -67,11 +67,11 @@ onLogin:function(){
   }
 
   wx.request({
-    url: app.globalData.httpUrl+ 'iotapi/login',//仅为示例，并非真实的接口地址,当前登录方式为账号密码登录    
+    url: app.globalData.httpUrl+ 'iotapi/wechat',//仅为示例，并非真实的接口地址,当前登录方式为账号密码登录    
     //'iotapi/wechat', //小程序登录方式，需获取oepnid
     method: 'POST',
     data: {
-      // openid:that.data.openid,
+      openid:that.data.openid,
       password: that.data.mPwd,
       username: that.data.mCode
     },
@@ -79,8 +79,6 @@ onLogin:function(){
       'content-type': 'text/plain' // 默认值
     },
     success(res) {
-// console.log(res);
-
       if( res.data.error == that.data.mCode+'is bind' ){
         that.anniu("该账号已被其他账户绑定");
         return
@@ -96,7 +94,7 @@ onLogin:function(){
       app.globalData.token = res.data.sessionToken
       app.globalData.tag = res.data.tag
       app.globalData.info = res.data
-      // wx.setStorageSync('sessionToken', res.data.sessionToken)
+      wx.setStorageSync('sessionToken', res.data.sessionToken)
       wx.switchTab({
         url: '../../pages/home/home'
       })

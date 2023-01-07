@@ -2,9 +2,9 @@
 App({
   onLaunch() {
     // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // const logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
 
     // 登录
     wx.login({
@@ -21,8 +21,8 @@ App({
     departmentList: [],
     title1: '所有部门',
     toUser: false,
-    httpUrl: 'http://127.0.0.1:5080/',
-    serverUrl: 'http://127.0.0.1:5080',
+    httpUrl: 'https://prod.dgiotcloud.cn/',
+    serverUrl: 'https://prod.dgiotcloud.cn',
     tag: '',
   }
 })

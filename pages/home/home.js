@@ -80,7 +80,7 @@ Page({
     onMsg: function () {
         if (wx.requestSubscribeMessage) {
             wx.requestSubscribeMessage({
-                tmplIds: ['_g3WZTy50e6EtOBE2AqDrDMc1IbP8Osxirsz72-Nqlk'],
+                tmplIds: ['KPrOuqybaAh_rIqo9GcINJjdr5wn1HFONnlkUtheAD8'],
                 success(res) {
                     console.log("订阅了" + res);
                 },
